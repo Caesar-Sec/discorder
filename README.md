@@ -8,7 +8,8 @@ The original code can be found [here.](https://github.com/leobeosab/hacks/blob/m
 export D_NOTIFICATION_WH=[your webhook url]  
 go run discordmessage.go "Hello, World!" 
 
-## Or get fancy and install
+Or  
+
 go install discordmessage.go  
 and now we can use discordmessage from anywhere
 
