@@ -13,6 +13,9 @@ Or
 go install discordmessage.go  
 and now we can use discordmessage from anywhere
 
+Or  
+
+Personally I like to hardcode my webhook into the code to do this just follow the comment on line 19 of the code.
 
 # Credit
 Again this script was almost entirely written by <https://github.com/leobeosab>. I only added 2 lines of code.
