@@ -1,21 +1,45 @@
-# discordmessages
-Go script for sending messages to discord via webhooks. The code was originally taken from <https://ryanwise.me/blog/recon-upgrade-discord/>, which is worth the read. I just slightly modified it for my prefered formatting for discord. 
-The original code can be found [here.](https://github.com/leobeosab/hacks/blob/master/go/discordmessage/discordmessage.go)
+# discorder
+Go script for sending messages to discord via webhooks, with standard markdown for discord.
 
 
-# To use
+# Install
 
-export D_NOTIFICATION_WH=[your webhook url]  
-go run discordmessage.go "Hello, World!" 
+- ``` git clone https://github.com/Caesar-Sec/discorder.git ```
+- ``` cd discorder ```
+-  Edit discorder.go with your prefered editor, from here you have two options:  
+    - Hardcode your webhook by pasting your webhook url on line 34.  
+  OR  
+    - Comment out line 34 and remove the // from line 32, then save and exit the editor.
+    - Next run the following command and your webhook: ```export D_NOTIFICATION_WH=[your webhook url]```
+    
+- ```go install discorder.go```
+    
 
-Or  
+# Basic Usage
+### Standard message
+* ```discorder test```  
 
-go install discordmessage.go  
-and now we can use discordmessage from anywhere
+### Bold message
+* ```discorder -b test```  
 
-Or  
+### Inline-code message
+* ```discorder -i test```  
 
-Personally I like to hardcode my webhook into the code to do this just follow the comment on line 19 of the code.
+### Code block message
+* ```discorder -c test```  
+
+### Including file content
+* ```discorder $(< test.txt)```  
+
+# Notes
+- Only one flag should be called at a time, more than this breaks the output by sending the second flag through the webhook as part of the message.
+- Currently this only tool only allows for one webhook url to be used, there are ways round this issue but I plan to update it in the future to allow for more webhooks to be added. 
+
+# To-Do
+- [ ] Read webhooks from a configuration file and allow the user to select which webhook the tool should use.
+- [ ] Implement a better method of including file content without first assgining it to a variable.
+- [ ] Allow the output of commands to be piped to discorder.
+
 
 # Credit
-Again this script was almost entirely written by <https://github.com/leobeosab>. I only added 2 lines of code.
+The original code was taken from this blog post on [Recon with discord webhooks](https://ryanwise.me/blog/recon-upgrade-discord/). I then modified it to allow for formatting.
