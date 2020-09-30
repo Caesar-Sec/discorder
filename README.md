@@ -7,10 +7,10 @@ Go script for sending messages to discord via webhooks, with standard markdown f
 - ``` git clone https://github.com/Caesar-Sec/discorder.git ```
 - ``` cd discorder ```
 -  Edit discorder.go with your prefered editor, from here you have two options:  
-    - Hardcode your webhook by pasting your webhook url on line 34.  
+    - Paste your webhook url on line 34.  
   OR  
     - Comment out line 34 and remove the // from line 32, then save and exit the editor.
-    - Next run the following command and your webhook: ```export D_NOTIFICATION_WH=[your webhook url]```
+    - Next run the following command and add your webhook: ```export D_NOTIFICATION_WH=[your webhook url]```
     
 - ```go install discorder.go```
     
