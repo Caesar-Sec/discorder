@@ -30,7 +30,7 @@ func main() {
 	flag.Parse()
 
 	// hook := os.Getenv("D_NOTIFICATION_WH")
-    // add your discord own webhook here
+    	// add your discord own webhook here
 	hook := ("https://discordapp.com/api/webhooks/your-discord-webhook-here")
 
 	var c string
